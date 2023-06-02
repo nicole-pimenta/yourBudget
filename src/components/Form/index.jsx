@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { StyledLabel } from "../../styles/typography";
 import Input from "../Input";
 import { formSchema } from "./formSchema";
-import { StyledContainerForm, StyledMessageError } from "./style";
+import { StyledForm, StyledMessageError } from "./style";
 
 const Form = ({ listTransactions, setListTransactions }) => {
   const {
@@ -17,48 +17,45 @@ const Form = ({ listTransactions, setListTransactions }) => {
 
   const submit = (formData) => {
     const data = { ...formData, id: uuidv4() };
-
     setListTransactions([...listTransactions, data]);
   };
 
   return (
-    <StyledContainerForm className="container">
-      <form onSubmit={handleSubmit(submit)}>
-        <Input
-          label="Descrição"
-          placeholder="Digite aqui sua descrição"
-          type="text"
-          id="description"
-          {...register("description")}
-        />
-        {errors.description ? (
-          <StyledMessageError>{errors.description.message}</StyledMessageError>
-        ) : null}
+    <StyledForm onSubmit={handleSubmit(submit)}>
+      <Input
+        label="Descrição"
+        placeholder="Digite aqui sua descrição"
+        type="text"
+        id="description"
+        {...register("description")}
+      />
+      {errors.description ? (
+        <StyledMessageError>{errors.description.message}</StyledMessageError>
+      ) : null}
 
-        <Input
-          label="Valor(R$)"
-          placeholder="1"
-          type="number"
-          id="value"
-          {...register("value")}
-        />
-        {errors.value ? (
-          <StyledMessageError>{errors.value.message}</StyledMessageError>
-        ) : null}
+      <Input
+        label="Valor(R$)"
+        placeholder=" R$ 1"
+        type="number"
+        id="value"
+        {...register("value")}
+      />
+      {errors.value ? (
+        <StyledMessageError>{errors.value.message}</StyledMessageError>
+      ) : null}
 
-        <StyledLabel htmlFor="type">Tipo de valor</StyledLabel>
+      <StyledLabel htmlFor="type">Tipo de valor</StyledLabel>
 
-        <select id="type" {...register("type")}>
-          <option value="entrada">Entrada</option>
-          <option value="saida">Saída</option>
-        </select>
+      <select id="type" {...register("type")}>
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
 
-        {errors.type ? (
-          <StyledMessageError>{errors.type.message}</StyledMessageError>
-        ) : null}
-        <button type="submit">Inserir valor</button>
-      </form>
-    </StyledContainerForm>
+      {errors.type ? (
+        <StyledMessageError>{errors.type.message}</StyledMessageError>
+      ) : null}
+      <button type="submit">Inserir valor</button>
+    </StyledForm>
   );
 };
 

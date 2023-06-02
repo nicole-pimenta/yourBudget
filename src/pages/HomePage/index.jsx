@@ -22,7 +22,6 @@ const HomePage = () => {
 
             <TotalMoney listTransactions={listTransactions} />
           </FormSection>
-
           <ListSection>
             <List
               listTransactions={listTransactions}

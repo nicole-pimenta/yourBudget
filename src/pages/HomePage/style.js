@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const StyledHomePage = styled.div`
   position: relative;
   top: 20px;
-  max-height: 800px;
+  max-height: 900px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: blue;
     gap: 30px;
   }
 `;

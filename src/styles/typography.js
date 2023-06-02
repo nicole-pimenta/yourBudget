@@ -41,9 +41,8 @@ export const StyledLabel = styled.label`
   font-size: var(--text-2);
   font-weight: 400;
   color: var(--color-grey-4);
-  width: 314px;
+  width: 100%;
   text-align: left;
-  padding-left: 15px;
 `;
 
 export const StyledSpan = styled.span`

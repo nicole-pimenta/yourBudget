@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   scroll-behavior: smooth;
   text-decoration: none;
-  
 }
 
 img {
@@ -44,14 +43,9 @@ button{
 }
 
 body {
- font-family: "Nunito", sans-serif;
- background: var(--color-grey-1);
-}
-
-.container {
-  max-width: 76rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+height: 100vh;
+font-family: "Nunito", sans-serif;
+background: var(--color-grey-1);
 }
 
 `;
