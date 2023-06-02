@@ -6,20 +6,21 @@ export const StyledContainerList = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
-  width: 355px;
+  width: 100%;
+
+  max-width: 560px;
+  height: 520px;
+  max-height: 800px;
 
   ul {
-    height: 350px;
+    height: 95%;
+    width: 95%;
+    margin: 0 auto;
     overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-
-    @media (min-width: 1024px) {
-      max-height: 70vh;
-      width: 100%;
-    }
   }
 `;

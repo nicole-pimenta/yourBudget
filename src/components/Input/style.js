@@ -14,9 +14,10 @@ export const StyledInputContainer = styled.div`
     color: var(--color-grey-3);
   }
 
-  /* @media (max-width: 800px) {
+  @media (max-width: 800px) {
     input {
-      width: 314px;
+      max-width: 314px;
       height: 48px;
-    /* } */
+    }
+  }
 `;

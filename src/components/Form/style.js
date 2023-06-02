@@ -39,10 +39,10 @@ export const StyledForm = styled.form`
     background: var(--color-grey-2);
     color: var(--color-grey-3);
     cursor: pointer;
-  }
 
-  @media (max-width: 700px) {
-    width: 100%;
+    @media (max-width: 800px) {
+      height: 48px;
+    }
   }
 `;
 
@@ -53,4 +53,8 @@ export const StyledMessageError = styled.span`
   line-height: 22px;
   color: var(--color-secondary);
   width: 80%;
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;

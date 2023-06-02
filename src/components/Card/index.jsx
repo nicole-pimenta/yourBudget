@@ -1,5 +1,9 @@
 import { StyledSpan, StyledText2 } from "../../styles/typography";
-import { StyledCard } from "./style";
+import {
+  StyledCard,
+  StyledValueSection,
+  StyledValueDescription,
+} from "./style";
 
 const Card = ({ itemTransaction, setListTransactions, listTransactions }) => {
   const handleDeleteCard = (cardId) => {
@@ -11,14 +15,14 @@ const Card = ({ itemTransaction, setListTransactions, listTransactions }) => {
     <>
       {itemTransaction.type === "entrada" ? (
         <StyledCard>
-          <section>
+          <StyledValueDescription>
             <StyledText2 color="#212529">
               {" "}
               {itemTransaction.description}{" "}
             </StyledText2>
             <StyledSpan> {itemTransaction.type}</StyledSpan>
-          </section>
-          <section>
+          </StyledValueDescription>
+          <StyledValueSection>
             <StyledSpan>
               {" "}
               R$ {Number(`${itemTransaction.value}`).toFixed(2)}
@@ -26,18 +30,18 @@ const Card = ({ itemTransaction, setListTransactions, listTransactions }) => {
             <button onClick={() => handleDeleteCard(itemTransaction.id)}>
               excluir
             </button>
-          </section>
+          </StyledValueSection>
         </StyledCard>
       ) : (
         <StyledCard color="#212529">
-          <section>
+          <StyledValueDescription>
             <StyledText2 color="#212529">
               {" "}
               {itemTransaction.description}{" "}
             </StyledText2>
             <StyledSpan> {itemTransaction.type}</StyledSpan>
-          </section>
-          <section>
+          </StyledValueDescription>
+          <StyledValueSection>
             <StyledSpan>
               {" "}
               R$ {Number(`${itemTransaction.value * -1}`).toFixed(2)}
@@ -45,7 +49,7 @@ const Card = ({ itemTransaction, setListTransactions, listTransactions }) => {
             <button onClick={() => handleDeleteCard(itemTransaction.id)}>
               excluir
             </button>
-          </section>
+          </StyledValueSection>
         </StyledCard>
       )}
     </>

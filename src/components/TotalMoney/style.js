@@ -5,20 +5,19 @@ export const StyledContainerTotalMoney = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 10px;
+  padding: 20px;
   border: 1px solid #00000033;
-
   width: 90%;
-  height: 96px;
-  margin: auto;
-  div {
+  max-height: 70px;
+
+  @media (max-width: 800px) {
     width: 100%;
+  }
+
+  div {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 20px;
   }
 `;
