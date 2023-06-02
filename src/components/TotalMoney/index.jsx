@@ -15,7 +15,7 @@ const TotalMoney = ({ listTransactions }) => {
       <div>
         <StyledText2 color="#212529">Valor Total:</StyledText2>
 
-        <StyledText2 color="#FD377E">R$ {total}</StyledText2>
+        <StyledText2 color="#FD377E"> R$ {total.toFixed(2)}</StyledText2>
       </div>
 
       <StyledSpan> O valor se refere ao saldo </StyledSpan>

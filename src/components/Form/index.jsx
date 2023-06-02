@@ -10,6 +10,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(formSchema),
@@ -18,6 +19,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
   const submit = (formData) => {
     const data = { ...formData, id: uuidv4() };
     setListTransactions([...listTransactions, data]);
+    reset();
   };
 
   return (
@@ -48,7 +50,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
 
       <select id="type" {...register("type")}>
         <option value="entrada">Entrada</option>
-        <option value="saida">Saída</option>
+        <option value="saída">Saída</option>
       </select>
 
       {errors.type ? (
