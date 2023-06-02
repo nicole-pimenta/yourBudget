@@ -1,9 +1,10 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import Form from "../../components/Form";
 import Header from "../../components/Header";
 import List from "../../components/List";
 import TotalMoney from "../../components/TotalMoney";
-import { StyledContainer } from "./style";
+import { StyledContainer } from "../../styles/container";
+import { StyledHomePage, FormSection, ListSection } from "./style";
 
 const HomePage = () => {
   const [listTransactions, setListTransactions] = useState([]);
@@ -12,21 +13,23 @@ const HomePage = () => {
     <>
       <Header />
       <StyledContainer>
-        <section>
-          <Form
-            listTransactions={listTransactions}
-            setListTransactions={setListTransactions}
-          />
+        <StyledHomePage>
+          <FormSection>
+            <Form
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+            />
 
-          <TotalMoney listTransactions={listTransactions} />
-        </section>
+            <TotalMoney listTransactions={listTransactions} />
+          </FormSection>
 
-        <section>
-          <List
-            listTransactions={listTransactions}
-            setListTransactions={setListTransactions}
-          />
-        </section>
+          <ListSection>
+            <List
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+            />
+          </ListSection>
+        </StyledHomePage>
       </StyledContainer>
     </>
   );

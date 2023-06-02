@@ -1,15 +1,15 @@
-import React from "react";
 import { StyledTitle2 } from "../../styles/typography";
+import { StyledContainer } from "../../styles/container";
 import { StyledHeader } from "./style";
 
 const Header = () => {
   return (
     <StyledHeader>
-      <div className="container">
+      <StyledContainer>
         <StyledTitle2>
           Your<span>Budget</span>
         </StyledTitle2>
-      </div>
+      </StyledContainer>
     </StyledHeader>
   );
 };

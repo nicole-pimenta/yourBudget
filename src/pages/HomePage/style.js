@@ -1,33 +1,44 @@
 import styled from "styled-components";
 
-export const StyledContainer = styled.div`
-  width: 90%;
-  margin: 0 auto;
+export const StyledHomePage = styled.div`
+  position: relative;
+  top: 20px;
+  max-height: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    gap: 30px;
+  }
+`;
+
+export const FormSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
+  justify-content: center;
+  width: 40%;
+  gap: 20px;
 
-  section {
+  @media (max-width: 800px) {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    gap: 1rem;
   }
+`;
 
-  @media (min-width: 1024px) {
-    width: 70%;
-    height: 90vh;
-    flex-direction: row;
-    justify-content: center;
+export const ListSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 20px;
 
-    section {
-      width: 50%;
-      height: 60vh;
-    }
+  @media (max-width: 800px) {
+    width: 100%;
   }
 `;
