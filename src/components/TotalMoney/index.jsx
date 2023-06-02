@@ -3,7 +3,7 @@ import { StyledContainerTotalMoney } from "./style";
 
 const TotalMoney = ({ listTransactions }) => {
   const total = listTransactions.reduce((acc, curr) => {
-    if (curr.type === "saida") {
+    if (curr.type === "saída") {
       return acc + Number(curr.value) * -1;
     }
 

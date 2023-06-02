@@ -15,7 +15,7 @@ const Card = ({ itemTransaction, setListTransactions, listTransactions }) => {
     <>
       {itemTransaction.type === "entrada" ? (
         <StyledCard>
-          <StyledValueDescription>
+          <StyledValueDescription color="#CDDFD3">
             <StyledText2 color="#212529">
               {" "}
               {itemTransaction.description}{" "}
@@ -34,7 +34,7 @@ const Card = ({ itemTransaction, setListTransactions, listTransactions }) => {
         </StyledCard>
       ) : (
         <StyledCard color="#212529">
-          <StyledValueDescription>
+          <StyledValueDescription color="#ecde83">
             <StyledText2 color="#212529">
               {" "}
               {itemTransaction.description}{" "}

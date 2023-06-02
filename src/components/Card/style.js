@@ -18,12 +18,25 @@ export const StyledValueDescription = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  width: 60%;
+
+  background-color: ${(props) => props.color};
+
+  border-radius: 4px;
+
+  p,
+  span {
+    text-align: left;
+    width: 90%;
+  }
 `;
 
 export const StyledValueSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 
   button {
     height: 19px;
